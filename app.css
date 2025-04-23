@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+body{
+    font-family: Cormorant, serif;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: 300;
+    margin: 0 32px 0 0;
+
+}
+h1 em.active {
+
+    font-style: none;
+}
+
+.links {
+    display: inline-block;
+
+}
+
+.links li{
+    display: inline-block;
+}
+
+.links a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 8px;
+}
+
+.links ul {
+    padding: 0;
+}
+
+.navbar {
+    margin: 32px;
+}
+
+a.active {
+    border-bottom: 1px solid black;
+}
+
+.gallery {
+    padding: 16px; /*Used to get padding on outside of elements whilst space inside remainst the same*/
+}
+
+.card {                     /*We can group elements togethor to achieve a certain behaviour Eg. Getting pictures and captions below it*/
+    width: 49.75%;          /*eg. when h2's are set to inline-block they are on the same line however, we want them below the image thus we combine the image and caption by using a div then we set the div to inline block, basically we want the image and text to be inline*/
+    display: inline-block;  
+    padding: 16px;              /*Padding has to be added since margin would exist outside border box and push everything onto its own line*/
+    box-sizing: border-box;     /*Border box sums up the 20px of padding and the element width of 50%, without this elements would be pushed onto their own line*/
+}                               /*The width of the image box remains 49.75% while factoring in 20px padding into the box(minusing space from image)*/
+
+.card img {
+    height: 500px;
+    width: 100%; /*This forces image to use same width as parent also because width is not inherited .... In essence this says that cards are 40% width and we also want images to use this width*/
+    object-fit: cover; 
+}
+
+.card h2{
+    display: inline-block;
+    margin-top: 8px 0 16px 0;
+    font-weight: 300;
+}
+
+.about {
+    width: 40%;
+    min-width: 600px;
+    margin: 100px 0 100px 200px;
+}
+
+.about h3{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.contact {
+    margin-top: 100px;
+}
+
+.contact p{
+    margin: 0;
+    font-size: 20px;
+}
+
+.cta {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    padding-bottom: 8px; 
+    margin-top: 0px;
+}
+
+.card img:hover{
+    opacity: 0.9;
+}
